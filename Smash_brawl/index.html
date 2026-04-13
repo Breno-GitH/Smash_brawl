@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎮 Coliseu Brawl — Arena de Batalha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <section id="screen-select" class="screen screen-select">
+      <h1 class="title-main">⚔️ COLISEU BRAWL ⚔️</h1>
+      <p class="subtitle">Escolha seus lutadores e entre na arena da batalha</p>
+      <div class="select-grid">
+        <div class="select-block">
+          <h2>🔵 Jogador (P1)</h2>
+          <div class="char-cards" id="cards-p1"></div>
+        </div>
+        <div class="select-block">
+          <h2>🤖 CPU (Inimigo)</h2>
+          <div class="char-cards" id="cards-p2"></div>
+        </div>
+      </div>
+      <button type="button" class="btn-fight" id="btn-fight">⚡ ENTRAR NA ARENA ⚡</button>
+      <p class="select-hint">🎮 A/D andar · W/Espaço pular · Z/Shift atacar</p>
+    </section>
+
+    <section id="screen-game" class="screen screen-game hidden">
+      <header class="hud-top">
+        <div class="hud-card hud-player">
+          <span class="hud-label" id="hud-name-p1">P1</span>
+          <span class="hud-pct" id="hud-p1">0%</span>
+          <span class="hud-stocks" id="stocks-p1">●●●</span>
+        </div>
+        <div class="hud-title">⚡ ARENA ÉPICA ⚡</div>
+        <div class="hud-card hud-enemy">
+          <span class="hud-label" id="hud-name-p2">CPU</span>
+          <span class="hud-pct" id="hud-p2">0%</span>
+          <span class="hud-stocks" id="stocks-p2">●●●</span>
+        </div>
+      </header>
+
+      <div class="canvas-box">
+        <canvas id="game" width="960" height="540"></canvas>
+      </div>
+
+      <footer class="help">
+        <p><kbd>A</kbd>/<kbd>D</kbd> andar · <kbd>W</kbd>/<kbd>Espaço</kbd> pular · <kbd>Z</kbd>/<kbd>Shift</kbd> atacar</p>
+        <p class="hint">💡 % alto = mais knockback. 🌊 Caiu na água = perde uma vida!</p>
+      </footer>
+    </section>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
