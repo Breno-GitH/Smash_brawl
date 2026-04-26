@@ -10,7 +10,7 @@
   <div class="wrap">
     <section id="screen-select" class="screen screen-select">
       <h1 class="title-main">⚔️ COLISEU BRAWL ⚔️</h1>
-      <p class="subtitle">Escolha seus lutadores e entre na arena da batalha</p>
+      <p class="subtitle">1. Escolha os lutadores que entrarão na batalha</p>
       <div class="select-grid">
         <div class="select-block">
           <h2>🔵 Jogador (P1)</h2>
@@ -21,8 +21,17 @@
           <div class="char-cards" id="cards-p2"></div>
         </div>
       </div>
-      <button type="button" class="btn-fight" id="btn-fight">⚡ ENTRAR NA ARENA ⚡</button>
-      <p class="select-hint">🎮 A/D andar · W/Espaço pular · Z/Shift atacar</p>
+      <button type="button" class="btn-fight" id="btn-to-stage">🗺️ ESCOLHER ARENA 🗺️</button>
+      <p class="select-hint">🎮 A/D andar · W pular · Shift correr · Q Ataque · F Especial</p>
+    </section>
+
+    <section id="screen-stage" class="screen screen-select hidden">
+      <h1 class="title-main">🌍 ESCOLHA A ARENA</h1>
+      <p class="subtitle">2. Onde a batalha épica irá acontecer?</p>
+      <div class="stage-grid" id="stage-cards">
+        </div>
+      <button type="button" class="btn-fight" id="btn-start-game">⚡ COMEÇAR BATALHA ⚡</button>
+      <button type="button" class="btn-back" id="btn-back-char">⬅️ Voltar</button>
     </section>
 
     <section id="screen-game" class="screen screen-game hidden">
@@ -32,7 +41,7 @@
           <span class="hud-pct" id="hud-p1">0%</span>
           <span class="hud-stocks" id="stocks-p1">●●●</span>
         </div>
-        <div class="hud-title">⚡ ARENA ÉPICA ⚡</div>
+        <div class="hud-title" id="hud-stage-name">⚡ ARENA ⚡</div>
         <div class="hud-card hud-enemy">
           <span class="hud-label" id="hud-name-p2">CPU</span>
           <span class="hud-pct" id="hud-p2">0%</span>
@@ -45,8 +54,7 @@
       </div>
 
       <footer class="help">
-        <p><kbd>A</kbd>/<kbd>D</kbd> andar · <kbd>W</kbd>/<kbd>Espaço</kbd> pular · <kbd>Z</kbd>/<kbd>Shift</kbd> atacar</p>
-        <p class="hint">💡 % alto = mais knockback. 🌊 Caiu na água = perde uma vida!</p>
+        <p><kbd>Q</kbd> Ataque · <kbd>F</kbd> Especial · <kbd>Shift</kbd> Dash · <kbd>W</kbd> Pulo Duplo</p>
       </footer>
     </section>
   </div>
